@@ -1,0 +1,28 @@
+#titulo {
+    width: 200px;
+    height: 150px;
+    color: chocolate;
+}
+
+code{
+    font: italic normal 120 10px "Arial Black", AmdtSymbols;
+    text-justify: auto;
+}
+
+#text_area{
+    font: contextual normal 85 20px "Comic Sans MS", "Bodoni MT Condensed";
+}
+
+textarea{
+    font: italic normal 130 20px "Arial Black", AmdtSymbols;
+
+}
+
+#div1{
+    background-color: aquamarine;
+}
+
+#pie_pagina{
+    background-color: chartreuse;
+
+}
