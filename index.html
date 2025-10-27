@@ -2,30 +2,88 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Personal</title>
 
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<div id="div1">
-    <h1 id="titulo">Pagina Personal</h1>
-    <h1>
 
-    </h1>
-    <h1>
+<header>
+    <div class="container1">
+        <h1 id="titulo-principal">El Rincón de [Tu Nombre]</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    </h1>
-    <code>
-        Codigo de Ejemplo hecho en HTML y decorado en CSS
-    </code>
+<main>
 
-    <p id="text_area">Ingrese cualquier texto</p>
-    <textarea></textarea>
-    <footer id="pie_pagina">
-        <h3>
-            Fin de la pagina
-        </h3>
-    </footer>
-</div>
+    <section id="sobre-mi">
+        <div class="container2">
+            <h2>Sobre Mí</h2>
+
+            <div class="info-personal">
+                <img src="ruta/a/mi-foto.jpg" alt="Una foto mía">
+                <p>
+                    ¡Hola! Soy [Tu Nombre]. Aquí puedes escribir una breve
+                    biografía sobre quién eres, qué te gusta hacer,
+                    y tu pasión por la programación.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <div class="container3">
+            <h2>Mis Proyectos</h2>
+
+            <div class="galeria-proyectos">
+
+                <div class="proyecto-item">
+                    <img src="ruta/a/proyecto1.png" alt="Imagen del Proyecto 1">
+                    <h3>Proyecto Uno</h3>
+                    <p>Descripción de lo que hace este proyecto...</p>
+                </div>
+
+                <div class="proyecto-item">
+                    <img src="ruta/a/proyecto2.png" alt="Imagen del Proyecto 2">
+                    <h3>Proyecto Dos</h3>
+                    <p>Descripción de lo que hace este proyecto...</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container4">
+            <h2>Contacto</h2>
+            <p>Puedes encontrarme en estas plataformas:</p>
+
+            <div>
+                <ul>
+                    <li><a href="#">Mi LinkedIn</a></li>
+                    <li><a href="#">Mi GitHub</a></li>
+                    <li><a href="mailto:tuemail@ejemplo.com">Envíame un email</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container5">
+        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>

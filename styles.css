@@ -18,11 +18,34 @@ textarea{
 
 }
 
-#div1{
+.container1{
     background-color: aquamarine;
 }
 
-#pie_pagina{
+.container2{
     background-color: chartreuse;
+}
 
+.info-personal{
+    background-color: cadetblue;
+}
+
+.container3{
+    background-color: teal;
+}
+
+.galeria-proyectos{
+    background-color: coral;
+}
+
+.proyecto-item{
+    background-color: darkblue;
+}
+
+.container4{
+    background-color: forestgreen;
+}
+
+.container5{
+    background-color: gold;
 }
