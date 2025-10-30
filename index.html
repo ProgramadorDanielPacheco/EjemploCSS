@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página Personal</title>
-
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 
 <header>
-    <div class="container1">
-        <h1 id="titulo-principal">El Rincón de [Tu Nombre]</h1>
+    <div class="container" id="container1">
+        <h1 id="titulo">El Rincón de Daniel Pacheco</h1>
         <nav>
             <ul>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#proyectos">Pasatiempos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -26,64 +24,124 @@
 <main>
 
     <section id="sobre-mi">
-        <div class="container2">
+        <div class="container" id="container2">
             <h2>Sobre Mí</h2>
 
-            <div class="info-personal">
-                <img src="ruta/a/mi-foto.jpg" alt="Una foto mía">
+            <article id="info-personal">
+                <img src="yo.jpg" alt="Una foto mía">
                 <p>
-                    ¡Hola! Soy [Tu Nombre]. Aquí puedes escribir una breve
-                    biografía sobre quién eres, qué te gusta hacer,
-                    y tu pasión por la programación.
+                    ¡Hola! Soy Daniel Pacheco. Mi vida escolar la realice en la escuela Padre
+                    Carlos Crespi de 1ro a 7mo de Básica, y para mis estudios de básica superior
+                    y bachillerato, los realice en la Unidad Educativa Técnico Salesiano.
+                    Actualmente estudio en la Universidad Politécnica Salesiana la carrera de
+                    Ciencias de la computacion
+                    Me encanta la programación y mi meta a futuro es poder crear y programar
+                    muchos videojuegos para que la gente los disfrute
                 </p>
-            </div>
+
+                <blockquote>
+                    <p>"La mejor forma de predecir el futuro es crearlo."</p>
+                    <cite>— Peter Drucker</cite>
+                </blockquote>
+            </article>
         </div>
     </section>
 
     <section id="proyectos">
-        <div class="container3">
-            <h2>Mis Proyectos</h2>
+        <div class="container" id="container3">
+            <h2>Mis Pasatiempos</h2>
 
-            <div class="galeria-proyectos">
+            <div id="galeria-proyectos">
 
-                <div class="proyecto-item">
-                    <img src="ruta/a/proyecto1.png" alt="Imagen del Proyecto 1">
-                    <h3>Proyecto Uno</h3>
-                    <p>Descripción de lo que hace este proyecto...</p>
-                </div>
+                <article class="proyecto-item">
 
-                <div class="proyecto-item">
-                    <img src="ruta/a/proyecto2.png" alt="Imagen del Proyecto 2">
-                    <h3>Proyecto Dos</h3>
-                    <p>Descripción de lo que hace este proyecto...</p>
-                </div>
+                    <figure>
+                        <img src="minecraft.png" alt="Pasatiempo 1">
+                        <figcaption>Pasatiempo 1</figcaption>
+                    </figure>
+
+                    <button type="button" class="btn-ver-mas">Ver más</button>
+
+                    <p class="proyecto-descripcion" style="display: none;">
+                        Uno de mis pasatiempos favoritos son los videojuegos y en especial
+                        si estos me permiten jugar al mismo tiempo con mis mejores amigos
+                        ya que me permiten pasar un buen tiempo con ellos, reirnos y disfrutar
+                        de ese tiempo.
+                        <br>
+                        <small>Tecnologías usadas: HTML, CSS, JS.</small>
+                    </p>
+                </article>
+
+                <article class="proyecto-item">
+                    <figure>
+                        <img src="futbol.jpg" alt="Pasatiempo 2">
+                        <figcaption>Pasatiempo 2</figcaption>
+                    </figure>
+                    <button type="button" class="btn-ver-mas">Ver más</button>
+                    <p class="proyecto-descripcion" style="display: none;">
+                        Mi segundo pasatiempo favorito es el futbol, actualmente no lo práctico demasiado
+                        pero me divierte jugarlo y en mis ratos libres cuando puedo reunirme con mis amigos
+                        nos hechamos una tardeada de partidos de futbol.
+                        <br>
+                        <small>Tecnologías usadas: HTML, CSS.</small>
+                    </p>
+                </article>
 
             </div>
         </div>
     </section>
 
     <section id="contacto">
-        <div class="container4">
+        <div class="container" id="container4">
             <h2>Contacto</h2>
             <p>Puedes encontrarme en estas plataformas:</p>
 
-            <div>
+            <address>
                 <ul>
-                    <li><a href="#">Mi LinkedIn</a></li>
-                    <li><a href="#">Mi GitHub</a></li>
-                    <li><a href="mailto:tuemail@ejemplo.com">Envíame un email</a></li>
+                    <li><a href="https://www.instagram.com/danipacheco685">Mi Instagram</a></li>
+                    <li><a href="https://github.com/ProgramadorDanielPacheco">Mi GitHub</a></li>
                 </ul>
-            </div>
-        </div>
+            </address>
+
+            <form>
+                <label for="email_usuario">
+                    <strong>Email: danielpacheco842005@gmail.com</strong>
+                </label>
+                <br>
+                <input type="email" id="email_usuario" placeholder="tu@email.com">
+                <br><br>
+
+                <label for="text_area">
+                    <strong>Déjame un mensaje:</strong>
+                </label>
+                <br>
+                <textarea id="text_area" rows="5" cols="40"></textarea>
+                <br>
+
+                <button type="button" id="btn-enviar">Enviar Mensaje</button>
+
+                <p id="mensaje-error" style="color: red; display: none;">
+                    Por favor, escribe un mensaje antes de enviar.
+                </p>
+            </form> </div>
     </section>
 
 </main>
 
 <footer>
-    <div class="container5">
-        <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+    <div class="container" id="container5">
+        <p>
+            <small>
+                &copy; <time datetime="2025">2025</time> Daniel Pacheco.
+                Todos los derechos reservados.
+            </small>
+            <br>
+            <a href="#">Volver arriba</a>
+        </p>
     </div>
 </footer>
+
+<script src="index.js"></script>
 
 </body>
 </html>

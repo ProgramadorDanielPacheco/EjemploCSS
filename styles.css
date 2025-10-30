@@ -1,51 +1,202 @@
+/* --- 1. CONFIGURACIÓN GLOBAL Y PALETA DE COLORES --- */
+
+/* Definimos variables de color al inicio.
+  Si quieres cambiar el color "principal" de la web, 
+  ¡solo necesitas cambiarlo aquí!
+*/
+:root {
+    --color-primario: #0056b3; /* Un azul profesional */
+    --color-secundario: #D2691E; /* El 'chocolate' que te gustó */
+    --color-fondo: #f8f9fa; /* Un gris muy claro para el fondo */
+    --color-fondo-tarjeta: #ffffff; /* Blanco para las "tarjetas" */
+    --color-texto: #333333; /* Un gris oscuro para el texto (no negro) */
+    --color-enlace: var(--color-primario);
+    --color-borde: #dddddd;
+}
+
+/* Reseteo básico para un comportamiento consistente 
+  en todos los navegadores.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Para que los clics en el menú sean suaves */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* --- 2. ESTRUCTURA Y CONTENEDOR PRINCIPAL --- */
+
+/* Esta es la clase MÁS importante. 
+  Centra tu contenido y le da un ancho máximo.
+  (Esta clase ya está en tu HTML).
+*/
+.container {
+    width: 90%;
+    max-width: 960px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-enlace);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/* --- 3. TIPOGRAFÍA (TÍTULOS Y TEXTOS) --- */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+/* Tu título principal */
 #titulo {
-    width: 200px;
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    /* Borramos los width/height fijos que tenías */
+}
+
+/* Títulos de sección (Sobre Mí, Proyectos...) */
+h2 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-borde);
+    margin-bottom: 30px; /* Espacio después del título */
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid var(--color-primario);
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* --- 4. CABECERA (HEADER) Y NAVEGACIÓN --- */
+
+header {
+    background-color: var(--color-fondo-tarjeta);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--color-fondo);
+    text-decoration: none;
+    opacity: 1;
+}
+
+/* --- 5. SECCIONES PRINCIPALES --- */
+
+main {
+    padding-top: 40px;
+}
+
+section {
+    /* Espacio entre cada sección */
+    margin-bottom: 50px;
+}
+
+/* "Sobre Mí" - imagen al lado del texto */
+#info-personal {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espacio entre imagen y texto */
+}
+
+#info-personal img {
+    width: 150px;
     height: 150px;
-    color: chocolate;
+    border-radius: 50%; /* ¡Foto de perfil redonda! */
+    object-fit: cover; /* Evita que la imagen se distorsione */
+    border: 4px solid var(--color-fondo-tarjeta);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-code{
-    font: italic normal 120 10px "Arial Black", AmdtSymbols;
-    text-justify: auto;
+/* --- 6. SECCIÓN DE PROYECTOS (¡LA REJILLA!) --- */
+
+#galeria-proyectos {
+    display: grid;
+    /* Esto crea una rejilla responsiva. 
+      Intentará poner columnas de 300px, y si no caben, 
+      pasará a una sola columna (en móviles).
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-#text_area{
-    font: contextual normal 85 20px "Comic Sans MS", "Bodoni MT Condensed";
+/* Estilo para CADA tarjeta de proyecto.
+  (Nota: Usamos .proyecto-item porque es una CLASE, no un ID)
+*/
+.proyecto-item {
+    background-color: var(--color-fondo-tarjeta);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden; /* Para que la imagen respete los bordes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-textarea{
-    font: italic normal 130 20px "Arial Black", AmdtSymbols;
-
+.proyecto-item:hover {
+    transform: translateY(-5px); /* Efecto "levantar" */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.container1{
-    background-color: aquamarine;
+.proyecto-item figure {
+    margin: 0;
 }
 
-.container2{
-    background-color: chartreuse;
-}
-
-.info-personal{
-    background-color: cadetblue;
-}
-
-.container3{
-    background-color: teal;
-}
-
-.galeria-proyectos{
-    background-color: coral;
-}
-
-.proyecto-item{
-    background-color: darkblue;
-}
-
-.container4{
-    background-color: forestgreen;
-}
-
-.container5{
-    background-color: gold;
-}
+.proyecto-item img {
+    width:
